@@ -152,6 +152,11 @@ class ExampleUnitTest {
     }
 
     @Test
+    fun normalize_phone_null() {
+        Assert.assertNull(User.normalizePhone(null))
+    }
+
+    @Test
     fun login_user_not_found() {
         val holder = UserHolder
         holder.registerUser("John Doe", "John_Doe@unknown.com","testPass")
